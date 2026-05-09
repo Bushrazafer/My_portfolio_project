@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bushra Zafar — Full Stack Web Developer & UI/UX Enthusiast. View my portfolio, projects, and get in touch." />
+    <meta name="keywords" content="web developer, portfolio, react, javascript, frontend, fullstack" />
+    <meta name="author" content="Bushra Zafar" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Bushra Zafar | Web Developer Portfolio" />
+    <meta property="og:description" content="Full Stack Developer specializing in React & JavaScript" />
+    <meta property="og:image" content="assets/images/profile.jpg" />
+    <meta property="og:url" content="https://bushrazafar.dev" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bushra Zafar | Web Developer Portfolio" />
+    <meta name="twitter:description" content="Full Stack Developer specializing in React & JavaScript" />
+    <title>Bushra Zafar | Full Stack Web Developer</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════
+         NAVBAR
+    ═══════════════════════════════════════════════ -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" aria-label="Bushra Zafar — Home">
+                <span class="logo-text">Bushra</span><span class="logo-accent">.</span>
+            </a>
+            <ul class="nav-links" id="nav-links" role="list">
+                <li><a href="#home"     class="nav-link active" aria-current="page">Home</a></li>
+                <li><a href="#about"    class="nav-link">About</a></li>
+                <li><a href="#skills"   class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact"  class="nav-link">Contact</a></li>
+                <li>
+                    <a href="assets/resume.pdf" class="nav-resume-btn" download aria-label="Download Resume">
+                        <i class="fa-solid fa-download" aria-hidden="true"></i> Resume
+                    </a>
+                </li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════
+         HERO SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="home" class="hero" aria-label="Introduction">
+        <canvas id="particle-canvas" aria-hidden="true"></canvas>
+        <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+        <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+        <div class="hero-blob hero-blob-3" aria-hidden="true"></div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge animate-fade-up" style="--delay: 0ms">
+                    <span class="hero-badge-dot" aria-hidden="true"></span>
+                    <span>Available for Freelance Work</span>
+                </div>
+                <h1 class="hero-title animate-fade-up" style="--delay: 100ms">
+                    Hi, I'm <span class="gradient-text">Bushra Zafar</span>
+                </h1>
+                <div class="hero-typewriter animate-fade-up" style="--delay: 200ms" aria-live="polite">
+                    <span class="typewriter-prefix">I build </span>
+                    <span class="typewriter-dynamic" id="typewriter-text"></span>
+                    <span class="typewriter-cursor" aria-hidden="true">|</span>
+                </div>
+                <p class="hero-description animate-fade-up" style="--delay: 300ms">
+                    Crafting high-performance, accessible web experiences with clean code 
+                    and creative design. Turning complex problems into elegant solutions.
+                </p>
+                <div class="hero-actions animate-fade-up" style="--delay: 400ms">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                        Hire Me
+                    </a>
+                </div>
+                <div class="hero-socials animate-fade-up" style="--delay: 500ms" aria-label="Social links">
+                    <a href="https://github.com/Bushrazafer/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/Bushrazafer" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://twitter.com/Bushrazafer" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="mailto:bushrazafer @example.com" class="social-link" aria-label="Email">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual animate-fade-up" style="--delay: 200ms">
+                <div class="hero-image-ring" aria-hidden="true">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                </div>
+                <div class="hero-image-frame">
+                    <img src="assets/images/profile.jpg" alt="Bushra Zafar — Web Developer" class="hero-image" width="420" height="420" loading="eager" />
+                    <div class="hero-image-overlay" aria-hidden="true"></div>
+                </div>
+                <div class="floating-card floating-card-1" aria-label="Experience: 3 years">
+                    <div class="floating-card-icon" aria-hidden="true">
+                        <i class="fa-solid fa-trophy"></i>
+                    </div>
+                    <div class="floating-card-info">
+                        <strong>3+ Years</strong>
+                        <span>Experience</span>
+                    </div>
+                </div>
+                <div class="floating-card floating-card-2" aria-label="20+ Projects">
+                    <div class="floating-card-icon" aria-hidden="true">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="floating-card-info">
+                        <strong>20+ Projects</strong>
+                        <span>Completed</span>
+                    </div>
+                </div>
+                <div class="floating-card floating-card-3" aria-label="Open to work">
+                    <div class="floating-card-icon floating-card-icon-green" aria-hidden="true">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="floating-card-info">
+                        <strong>Open to Work</strong>
+                        <span>Remote / On-site</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to About section">
+            <span class="scroll-label">Scroll Down</span>
+            <div class="scroll-mouse" aria-hidden="true">
+                <div class="scroll-wheel"></div>
+            </div>
+        </a>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         ABOUT SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="about" class="section about" aria-label="About Me">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-eyebrow">Get To Know Me</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <div class="section-line" aria-hidden="true"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image-col" data-aos="fade-right" data-aos-delay="100">
+                    <div class="about-image-wrapper">
+                        <div class="about-image-bg" aria-hidden="true"></div>
+                        <div class="about-image-frame">
+                            <img src="assets/images/profile.jpg" alt="Bushra Zafar at his workspace" class="about-image" width="480" height="540" loading="lazy" />
+                        </div>
+                        <div class="about-image-decoration" aria-hidden="true">
+                            <span class="decoration-dot decoration-dot-1"></span>
+                            <span class="decoration-dot decoration-dot-2"></span>
+                            <span class="decoration-dot decoration-dot-3"></span>
+                        </div>
+                    </div>
+                    <div class="about-exp-badge" aria-hidden="true">
+                        <i class="fa-solid fa-star"></i>
+                        <div>
+                            <strong>3+</strong>
+                            <span>Years of Experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-content-col" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="about-heading">
+                        I build things for the <span class="gradient-text">web</span> that matter
+                    </h3>
+                    <p class="about-text">
+                        Hi! I'm <strong>Bushra Zafar </strong>, a passionate Full Stack Web Developer based in 
+                        <strong>New York, USA</strong>. I specialize in building modern, performant, 
+                        and accessible web applications using <strong>React</strong>, <strong>JavaScript</strong>, 
+                        and <strong>Node.js</strong>.
+                    </p>
+                    <p class="about-text">
+                        My journey in tech started with a curiosity for how websites work. Since then, I've 
+                        worked with startups and agencies to deliver production-ready digital products. When 
+                        I'm not coding, I contribute to open-source projects and write technical articles.
+                    </p>
+
+                    <div class="about-stats" role="list" aria-label="Key statistics">
+                        <div class="stat-box" role="listitem">
+                            <span class="stat-number" data-target="20">0</span>
+                            <span class="stat-suffix">+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-separator" aria-hidden="true"></div>
+                        <div class="stat-box" role="listitem">
+                            <span class="stat-number" data-target="15">0</span>
+                            <span class="stat-suffix">+</span>
+                            <span class="stat-label">Clients</span>
+                        </div>
+                        <div class="stat-separator" aria-hidden="true"></div>
+                        <div class="stat-box" role="listitem">
+                            <span class="stat-number" data-target="3">0</span>
+                            <span class="stat-suffix">+</span>
+                            <span class="stat-label">Years Exp.</span>
+                        </div>
+                        <div class="stat-separator" aria-hidden="true"></div>
+                        <div class="stat-box" role="listitem">
+                            <span class="stat-number" data-target="5">0</span>
+                            <span class="stat-suffix">k+</span>
+                            <span class="stat-label">GitHub Stars</span>
+                        </div>
+                    </div>
+
+                    <div class="about-tech-stack" aria-label="Technologies I use">
+                        <span class="tech-pill"><i class="fa-brands fa-react" aria-hidden="true"></i> React</span>
+                        <span class="tech-pill"><i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript</span>
+                        <span class="tech-pill"><i class="fa-brands fa-node-js" aria-hidden="true"></i> Node.js</span>
+                        <span class="tech-pill"><i class="fa-brands fa-python" aria-hidden="true"></i> Python</span>
+                        <span class="tech-pill"><i class="fa-brands fa-git-alt" aria-hidden="true"></i> Git</span>
+                        <span class="tech-pill"><i class="fa-brands fa-docker" aria-hidden="true"></i> Docker</span>
+
+                    </div>
+
+                    <div class="about-actions">
+                        <a href="assets/resume.pdf" class="btn btn-primary" download aria-label="Download Resume PDF">
+                            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i> Download CV
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fa-solid fa-comment-dots" aria-hidden="true"></i> Let's Talk
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SKILLS SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="skills" class="section skills" aria-label="My Skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-eyebrow">What I Know</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+                <div class="section-line" aria-hidden="true"></div>
+            </div>
+
+            <div class="skills-tabs" role="tablist" aria-label="Skill categories" data-aos="fade-up" data-aos-delay="100">
+                <button class="skills-tab active" role="tab" aria-selected="true" data-tab="all">All</button>
+                <button class="skills-tab" role="tab" aria-selected="false" data-tab="frontend">Frontend</button>
+                <button class="skills-tab" role="tab" aria-selected="false" data-tab="backend">Backend</button>
+                <button class="skills-tab" role="tab" aria-selected="false" data-tab="tools">Tools</button>
+            </div>
+
+            <div class="skills-grid" id="skills-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="skill-card" data-category="frontend">
+                    <div class="skill-card-icon"><i class="fa-brands fa-html5" aria-hidden="true"></i></div>
+                    <div class="skill-card-info">
+                        <div class="skill-card-header">
+                            <h4 class="skill-card-name">HTML5</h4>
+                            <span class="skill-card-percent">95%</span>
+                        </div>
+                        <div class="skill-bar-track" aria-label="HTML5 skill level: 95%">
+                            <div class="skill-bar-fill" data-width="95"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="frontend">
+                    <div class="skill-card-icon"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i></div>
+                    <div class="skill-card-info">
+                        <div class="skill-card-header">
+                            <h4 class="skill-card-name">CSS3 / SASS</h4>
+                            <span class="skill-card-percent">90%</span>
+                        </div>
+                        <div class="skill-bar-track" aria-label="CSS3 skill level: 90%">
+                            <div class="skill-bar-fill" data-width="90"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="frontend">
+                    <div class="skill-card-icon"><i class="fa-brands fa-js" aria-hidden="true"></i></div>
+                    <div class="skill-card-info">
+                        <div class="skill-card-header">
+                            <h4 class="skill-card-name">JavaScript</h4>
+                            <span class="skill-card-percent">92%</span>
+                        </div>
+                        <div class="skill-bar-track" aria-label="JavaScript skill level: 92%">
+                            <div class="skill-bar-fill" data-width="92"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="frontend">
+                    <div class="skill-card-icon"><i class="fa-brands fa-react" aria-hidden="true"></i></div>
+                    <div class="skill-card-info">
+                        <div class="skill-card-header">
+                            <h4 class="skill-card-name">React.js</h4>
+                            <span class="skill-card-percent">88%</span>
+                        </div>
+                        <div class="skill-bar-track" aria-label="React skill level: 88%">
+                            <div class="skill-bar-fill" data-width="88"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="backend">
+                    <div class="skill-card-icon"><i class="fa-brands fa-node-js" aria-hidden="true"></i></div>
+                    <div class="skill-card-info">
+                        <div class="skill-card-header">
+                            <h4 class="skill-card-name">Node.js</h4>
+                            <span class="skill-card-percent">82%</span>
+                        </div>
+                        <div class="skill-bar-track" aria-label="Node.js skill level: 82%">
+                            <div class="skill-bar-fill" data-width="82"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="backend">
+                    <div class="skill-card-icon"><i class="fa-brands fa-python" aria-hidden="true"></i></div>
+                    <div class="skill-card-info">
+                        <div class="skill-card-header">
+                            <h4 class="skill-card-name">Python</h4>
+                            <span class="skill-card-percent">75%</span>
+                        </div>
+                        <div class="skill-bar-track" aria-label="Python skill level: 75%">
+                            <div class="skill-bar-fill" data-width="75"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="backend">
+                    <div class="skill-card-icon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+                    <div class="skill-card-info">
+                        <div class="skill-card-header">
+                            <h4 class="skill-card-name">MongoDB</h4>
+                            <span class="skill-card-percent">78%</span>
+                        </div>
+                        <div class="skill-bar-track" aria-label="MongoDB skill level: 78%">
+                            <div class="skill-bar-fill" data-width="78"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="backend">
+                    <div class="skill-card-icon"><i class="fa-solid fa-server" aria-hidden="true"></i></div>
+                    <div class="skill-card-info">
+                        <div class="skill-card-header">
+                            <h4 class="skill-card-name">Express.js</h4>
+                            <span class="skill-card-percent">80%</span>
+                        </div>
+                        <div class="skill-bar-track" aria-label="Express.js skill level: 80%">
+                            <div class="skill-bar-fill" data-width="80"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-card-icon"><i class="fa-brands fa-git-alt" aria-hidden="true"></i></div>
+                    <div class="skill-card-info">
+                        <div class="skill-card-header">
+                            <h4 class="skill-card-name">Git / GitHub</h4>
+                            <span class="skill-card-percent">90%</span>
+                        </div>
+                        <div class="skill-bar-track" aria-label="Git skill level: 90%">
+                            <div class="skill-bar-fill" data-width="90"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-card-icon"><i class="fa-brands fa-docker" aria-hidden="true"></i></div>
+                    <div class="skill-card-info">
+                        <div class="skill-card-header">
+                            <h4 class="skill-card-name">Docker</h4>
+                            <span class="skill-card-percent">70%</span>
+                        </div>
+                        <div class="skill-bar-track" aria-label="Docker skill level: 70%">
+                            <div class="skill-bar-fill" data-width="70"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-card-icon"><i class="fa-brands fa-figma" aria-hidden="true"></i></div>
+                    <div class="skill-card-info">
+                        <div class="skill-card-header">
+                            <h4 class="skill-card-name">Figma</h4>
+                            <span class="skill-card-percent">85%</span>
+                        </div>
+                        <div class="skill-bar-track" aria-label="Figma skill level: 85%">
+                            <div class="skill-bar-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-card-icon"><i class="fa-brands fa-aws" aria-hidden="true"></i></div>
+                    <div class="skill-card-info">
+                        <div class="skill-card-header">
+                            <h4 class="skill-card-name">AWS</h4>
+                            <span class="skill-card-percent">65%</span>
+                        </div>
+                        <div class="skill-bar-track" aria-label="AWS skill level: 65%">
+                            <div class="skill-bar-fill" data-width="65"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         PROJECTS SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="projects" class="section projects" aria-label="My Projects">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-eyebrow">What I've Built</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <div class="section-line" aria-hidden="true"></div>
+                <p class="section-subtitle">A curated selection of projects — from creative experiments to production applications.</p>
+            </div>
+
+            <div class="filter-bar" role="group" aria-label="Filter projects" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all" aria-pressed="true">
+                    <i class="fa-solid fa-border-all" aria-hidden="true"></i> All
+                </button>
+                <button class="filter-btn" data-filter="react" aria-pressed="false">
+                    <i class="fa-brands fa-react" aria-hidden="true"></i> React
+                </button>
+                <button class="filter-btn" data-filter="javascript" aria-pressed="false">
+                    <i class="fa-brands fa-js" aria-hidden="true"></i> JavaScript
+                </button>
+                <button class="filter-btn" data-filter="html-css" aria-pressed="false">
+                    <i class="fa-brands fa-html5" aria-hidden="true"></i> HTML/CSS
+                </button>
+                <button class="filter-btn" data-filter="fullstack" aria-pressed="false">
+                    <i class="fa-solid fa-layer-group" aria-hidden="true"></i> Full Stack
+                </button>
+            </div>
+
+            <div class="projects-grid" id="projects-grid" data-aos="fade-up" data-aos-delay="200">
+
+                <article class="project-card" data-category="react" aria-label="Project: DevBlog Platform">
+                    <div class="project-thumbnail">
+                        <img src="assets/images/project-thumbnails/project-1.jpg" alt="DevBlog Platform" loading="lazy" width="400" height="240" />
+                        <div class="project-overlay" aria-hidden="true">
+                            <a href="https://github.com/Bushrazafer/devblog" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" tabindex="-1">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://devblog-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" tabindex="-1">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <span class="project-badge project-badge-featured">⭐ Featured</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">MongoDB</span>
+                        </div>
+                        <h3 class="project-title">DevBlog Platform</h3>
+                        <p class="project-description">A full-featured blogging platform with Markdown editor, JWT auth, dark mode, and real-time comment system.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Bushrazafer/devblog" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View DevBlog source code">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i> Source Code
+                            </a>
+                            <a href="https://devblog-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link project-link-live" aria-label="View DevBlog live demo">
+                                <i class="fa-solid fa-globe" aria-hidden="true"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="javascript" aria-label="Project: TaskFlow App">
+                    <div class="project-thumbnail">
+                        <img src="assets/images/project-thumbnails/project-2.jpg" alt="TaskFlow App" loading="lazy" width="400" height="240" />
+                        <div class="project-overlay" aria-hidden="true">
+                            <a href="https://github.com/Bushrazafer/taskflow" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" tabindex="-1">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://taskflow-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" tabindex="-1">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Drag & Drop</span>
+                            <span class="project-tag">LocalStorage</span>
+                        </div>
+                        <h3 class="project-title">TaskFlow App</h3>
+                        <p class="project-description">Kanban-style task manager with drag-and-drop, priority labels, due dates, and persistent local storage.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Bushrazafer/taskflow" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i> Source Code
+                            </a>
+                            <a href="https://taskflow-demo.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link project-link-live">
+                                <i class="fa-solid fa-globe" aria-hidden="true"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="html-css" aria-label="Project: Portfolio Template">
+                    <div class="project-thumbnail">
+                        <img src="assets/images/project-thumbnails/project-3.jpg" alt="Portfolio Template" loading="lazy" width="400" height="240" />
+                        <div class="project-overlay" aria-hidden="true">
+                            <a href="https://github.com/Bushrazafer/portfolio-template" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" tabindex="-1">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://portfolio-template.netlify.app" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" tabindex="-1">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                        <span class="project-badge project-badge-open">Open Source</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">Animations</span>
+                        </div>
+                        <h3 class="project-title">Portfolio Template</h3>
+                        <p class="project-description">Animated, responsive portfolio starter. Pure HTML/CSS/JS — no frameworks needed. 200+ GitHub stars.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Bushrazafer/portfolio-template" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i> Source Code
+                            </a>
+                            <a href="https://portfolio-template.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link project-link-live">
+                                <i class="fa-solid fa-globe" aria-hidden="true"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="fullstack" aria-label="Project: ShopEase E-Commerce">
+                    <div class="project-thumbnail">
+                        <img src="assets/images/project-thumbnails/project-4.jpg" alt="ShopEase E-Commerce" loading="lazy" width="400" height="240" />
+                        <div class="project-overlay" aria-hidden="true">
+                            <a href="https://github.com/Bushrazafer/shopease" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" tabindex="-1">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://shopease.netlify.app" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" tabindex="-1">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">Node.js</span>
+                            <span class="project-tag">Stripe</span>
+                        </div>
+                        <h3 class="project-title">ShopEase E-Commerce</h3>
+                        <p class="project-description">Full-stack store with Stripe payments, shopping cart, JWT auth, order tracking, and admin dashboard.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Bushrazafer/shopease" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i> Source Code
+                            </a>
+                            <a href="https://shopease.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link project-link-live">
+                                <i class="fa-solid fa-globe" aria-hidden="true"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="react" aria-label="Project: Weather Dashboard">
+                    <div class="project-thumbnail">
+                        <img src="assets/images/project-thumbnails/project-5.jpg" alt="Weather Dashboard" loading="lazy" width="400" height="240" />
+                        <div class="project-overlay" aria-hidden="true">
+                            <a href="https://github.com/Bushrazafer/weather-app" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" tabindex="-1">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://weather-johndoe.netlify.app" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" tabindex="-1">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">OpenWeather API</span>
+                            <span class="project-tag">Charts.js</span>
+                        </div>
+                        <h3 class="project-title">Weather Dashboard</h3>
+                        <p class="project-description">Real-time weather app with 7-day forecast, animated icons, geolocation, and interactive charts.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Bushrazafer/weather-app" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i> Source Code
+                            </a>
+                            <a href="https://weather-johndoe.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link project-link-live">
+                                <i class="fa-solid fa-globe" aria-hidden="true"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="javascript" aria-label="Project: JS Quiz Game">
+                    <div class="project-thumbnail">
+                        <img src="assets/images/project-thumbnails/project-6.jpg" alt="JS Quiz Game" loading="lazy" width="400" height="240" />
+                        <div class="project-overlay" aria-hidden="true">
+                            <a href="https://github.com/Bushrazafer/quiz-game" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" tabindex="-1">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://quiz-johndoe.netlify.app" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" tabindex="-1">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Trivia API</span>
+                            <span class="project-tag">Timer</span>
+                        </div>
+                        <h3 class="project-title">JS Quiz Game</h3>
+                        <p class="project-description">Interactive quiz with categories, difficulty levels, countdown timer, score tracking, and leaderboard.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/Bushrazafer/quiz-game" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i> Source Code
+                            </a>
+                            <a href="https://quiz-johndoe.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link project-link-live">
+                                <i class="fa-solid fa-globe" aria-hidden="true"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="projects-cta" data-aos="fade-up">
+                <p class="projects-cta-text">Want to see more of my work?</p>
+                <a href="https://github.com/Bushrazafer/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="View all projects on GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> View All on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         CONTACT SECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="contact" class="section contact" aria-label="Contact Me">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-eyebrow">Get In Touch</span>
+                <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+                <div class="section-line" aria-hidden="true"></div>
+                <p class="section-subtitle">Have a project in mind or just want to say hi? I'll get back to you within 24 hours!</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="100">
+                    <h3 class="contact-info-title">Let's start a conversation</h3>
+                    <p class="contact-info-text">I'm always open to discussing new opportunities, creative projects, or just a friendly chat about tech.</p>
+
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-card-icon" aria-hidden="true">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-card-label">Email</span>
+                                <a href="mailto:bushrajunior666@gmail.com" class="contact-card-value">bushrajunior666@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon" aria-hidden="true">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-card-label">Phone</span>
+                                <a href="tel:+11234567890" class="contact-card-value">+923196478967</a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-card-icon" aria-hidden="true">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-card-content">
+                                <span class="contact-card-label">Location</span>
+                                <span class="contact-card-value">BahawalPur , Pakistan 🇵🇰</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials" aria-label="Social media profiles">
+                        <p class="contact-socials-label">Find me on</p>
+                        <div class="contact-socials-row">
+                            <a href="https://github.com/Bushrazafer/" target="_blank" rel="noopener noreferrer" class="contact-social-pill" aria-label="GitHub Profile">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                            </a>
+                            <a href="https://linkedin.com/in/Bushrazafer" target="_blank" rel="noopener noreferrer" class="contact-social-pill" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i> LinkedIn
+                            </a>
+                            <a href="https://twitter.com/bushrajunior" target="_blank" rel="noopener noreferrer" class="contact-social-pill" aria-label="Twitter Profile">
+                                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> Twitter
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-box" data-aos="fade-left" data-aos-delay="200">
+                    <form id="contact-form" class="contact-form" novalidate aria-label="Send a message">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="field-name" class="form-label">
+                                    Full Name <span class="form-required" aria-hidden="true">*</span>
+                                </label>
+                                <div class="form-input-wrap">
+                                    <i class="fa-solid fa-user form-input-icon" aria-hidden="true"></i>
+                                    <input type="text" id="field-name" name="user_name" class="form-input" placeholder="Bushra Zafar" required autocomplete="name" aria-required="true" aria-describedby="error-name" />
+                                </div>
+                                <span class="form-error" id="error-name" role="alert" aria-live="polite"></span>
+                            </div>
+                            <div class="form-field">
+                                <label for="field-email" class="form-label">
+                                    Email Address <span class="form-required" aria-hidden="true">*</span>
+                                </label>
+                                <div class="form-input-wrap">
+                                    <i class="fa-solid fa-envelope form-input-icon" aria-hidden="true"></i>
+                                    <input type="email" id="field-email" name="user_email" class="form-input" placeholder="bushrajunior666@gmail.com" required autocomplete="email" aria-required="true" aria-describedby="error-email" />
+                                </div>
+                                <span class="form-error" id="error-email" role="alert" aria-live="polite"></span>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="field-subject" class="form-label">
+                                Subject <span class="form-required" aria-hidden="true">*</span>
+                            </label>
+                            <div class="form-input-wrap">
+                                <i class="fa-solid fa-tag form-input-icon" aria-hidden="true"></i>
+                                <input type="text" id="field-subject" name="subject" class="form-input" placeholder="Project Inquiry / Collaboration..." required aria-required="true" aria-describedby="error-subject" />
+                            </div>
+                            <span class="form-error" id="error-subject" role="alert" aria-live="polite"></span>
+                        </div>
+                        <div class="form-field">
+                            <label for="field-message" class="form-label">
+                                Message <span class="form-required" aria-hidden="true">*</span>
+                            </label>
+                            <div class="form-input-wrap form-textarea-wrap">
+                                <i class="fa-solid fa-message form-input-icon" aria-hidden="true"></i>
+                                <textarea id="field-message" name="message" class="form-input form-textarea" placeholder="Tell me about your project, timeline, and budget..." rows="6" required aria-required="true" aria-describedby="error-message"></textarea>
+                            </div>
+                            <span class="form-error" id="error-message" role="alert" aria-live="polite"></span>
+                        </div>
+                        <button type="submit" id="submit-btn" class="btn btn-primary btn-full" aria-label="Send message">
+                            <span class="btn-text-default">
+                                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message
+                            </span>
+                            <span class="btn-text-loading" aria-hidden="true">
+                                <i class="fa-solid fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════════ -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo" aria-label="Back to top">
+                        <span class="logo-text">Bushra</span><span class="logo-accent">.</span>
+                    </a>
+                    <p class="footer-tagline">Crafting digital experiences with clean code & creative design. One commit at a time.</p>
+                    <div class="footer-social-row" aria-label="Social media">
+                        <a href="https://github.com/Bushrazafer/" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="GitHub">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/bushrajunior" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://twitter.com/bushrajunior" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="Twitter">
+                            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://codepen.io/bushrajunior" target="_blank" rel="noopener noreferrer" class="footer-social-icon" aria-label="CodePen">
+                            <i class="fa-brands fa-codepen" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <h4 class="footer-nav-title">Quick Links</h4>
+                    <ul class="footer-nav-list" role="list">
+                        <li><a href="#home"     class="footer-nav-link">Home</a></li>
+                        <li><a href="#about"    class="footer-nav-link">About</a></li>
+                        <li><a href="#skills"   class="footer-nav-link">Skills</a></li>
+                        <li><a href="#projects" class="footer-nav-link">Projects</a></li>
+                        <li><a href="#contact"  class="footer-nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-contact">
+                    <h4 class="footer-nav-title">Contact Info</h4>
+                    <ul class="footer-contact-list" role="list">
+                        <li>
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:bushrajunior666@gmail.com">bushrajunior666@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            <a href="tel:+923196478967">+92 319 647 8967</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            <span>Bahawalpur, Pakistan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-divider" aria-hidden="true"></div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    &copy; <span id="footer-year"></span> <strong>Bushra Zafar</strong>. All rights reserved.
+                    Built with <span class="heart-icon" aria-label="love">❤️</span> using HTML, CSS & JS.
+                </p>
+                <a href="#home" class="footer-back-top" aria-label="Back to top of page">
+                    Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════
+         FLOATING ELEMENTS
+    ═══════════════════════════════════════════════ -->
+    <button id="back-to-top" class="back-to-top-btn" aria-label="Scroll back to top" hidden>
+        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <div id="nav-overlay" class="nav-overlay" aria-hidden="true" hidden></div>
+
+    <!-- ═══════════════════════════════════════════════
+         SCRIPTS
+    ═══════════════════════════════════════════════ -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>
